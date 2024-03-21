@@ -1,0 +1,9 @@
+(executable
+ (public_name oz)
+ (name main)
+ (libraries oz core dream))
+
+(rule
+ (targets weight.ml)
+ (deps weight.eml.html)
+ (action (run dream_eml %{deps} --workspace %{workspace_root})))

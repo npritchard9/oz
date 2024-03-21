@@ -1,0 +1,5 @@
+_build
+test
+.DS_store
+frontend/node_modules
+frontend/bun.lockb
