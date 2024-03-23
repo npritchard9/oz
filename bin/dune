@@ -1,7 +1,8 @@
 (executable
  (public_name oz)
  (name main)
- (libraries oz core dream))
+ (libraries oz core dream)
+ (preprocess (pps lwt_ppx)))
 
 (rule
  (targets weight.ml)

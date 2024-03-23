@@ -1,4 +1,4 @@
-let html_weight =
+let html_weight req =
 <html>
     <head>
         <link rel="stylesheet" href="static/out.css" />
@@ -6,6 +6,7 @@ let html_weight =
     <body class="bg-black text-white">
         <div class="flex h-screen items-center justify-center">
             <form action="/weight" method="post">
+                <%s! Dream.csrf_tag req %>
                 <div class="flex flex-col gap-2">
                     <label for="weight" class="font-bold">Enter weight:</label>
                     <input
@@ -13,6 +14,7 @@ let html_weight =
                         type="text"
                         name="weight"
                         class="rounded-l px-2 py-4"
+                        autofocus
                         required
                     />
                     <input
