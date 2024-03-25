@@ -5,6 +5,6 @@
  (preprocess (pps lwt_ppx)))
 
 (rule
- (targets weight.ml)
- (deps weight.eml.html)
+ (targets weight.ml meal.ml)
+ (deps weight.eml.html meal.eml.html)
  (action (run dream_eml %{deps} --workspace %{workspace_root})))

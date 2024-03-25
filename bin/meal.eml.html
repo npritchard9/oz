@@ -1,0 +1,58 @@
+let html_meal req =
+<html>
+    <head>
+        <link rel="stylesheet" href="static/out.css" />
+    </head>
+    <body class="bg-black text-white">
+        <div class="flex h-screen items-center justify-center">
+            <form action="/meal" method="post">
+                <%s! Dream.csrf_tag req %>
+                <div class="flex flex-col gap-2">
+                    <label for="cals" class="font-bold">Calories:</label>
+                    <input
+                        id="cals"
+                        type="number"
+                        name="cals"
+                        class="rounded-l px-2 py-4"
+                        autofocus
+                        required
+                    />
+                    <label for="desc" class="font-bold">Description:</label>
+                    <input
+                        id="desc"
+                        type="text"
+                        name="desc"
+                        class="rounded-l px-2 py-4"
+                    />
+                    <div>Macros</div>
+                    <label for="protein" class="font-bold">Protein:</label>
+                    <input
+                        id="protein"
+                        type="number"
+                        name="protein"
+                        class="rounded-l px-2 py-4"
+                    />
+                    <label for="carbs" class="font-bold">Carbs:</label>
+                    <input
+                        id="carbs"
+                        type="number"
+                        name="carbs"
+                        class="rounded-l px-2 py-4"
+                    />
+                    <label for="fats" class="font-bold">Fats:</label>
+                    <input
+                        id="fats"
+                        type="number"
+                        name="fats"
+                        class="rounded-l px-2 py-4"
+                    />
+                    <input
+                        value="submit"
+                        type="Submit"
+                        class="rounded-xl bg-gray-700 px-2 py-4"
+                    />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
